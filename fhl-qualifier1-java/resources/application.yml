@@ -1,0 +1,20 @@
+app:
+  candidate:
+    name: "John Doe"        # <- CHANGE
+    regNo: "22BCE20311"       # <- CHANGE (last 2 digits decide Q1/Q2)
+    email: "nikhitha.22bce20311@vitapstudent.ac.in"  # <- CHANGE
+  endpoints:
+    base: "https://bfhldevapigw.healthrx.co.in"
+    generate: "/hiring/generateWebhook/JAVA"
+    fallbackSubmit: "/hiring/testWebhook/JAVA"   # used only if webhook is absent
+spring:
+  datasource:
+    url: jdbc:h2:mem:solutions;DB_CLOSE_DELAY=-1
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+logging.level.root: INFO
